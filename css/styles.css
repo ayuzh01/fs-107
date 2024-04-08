@@ -79,13 +79,17 @@ display: block;
     line-height: 1.14;
     letter-spacing: -0.02em;
     color: #111;
+
 }
 
 .header-soc-list {
     display: flex; 
     gap: 14;
 }
-
+.header-soc-icon {
+    fill: transparent;
+    stroke: #111;
+}
 
 .header-menu-link:hover,
 .header-menu-link:focus,
@@ -103,6 +107,10 @@ display: block;
     background: rgba(17, 17, 17, 0.6);
     padding: 380px 40px 40px 40px;
     border-radius: 30px;
+    background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(../images/hero.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 
 .hero-title {
@@ -148,8 +156,21 @@ display: block;
     letter-spacing: -0.03em;
     color: #fff;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
 }
 
+.hero-btn-scroll::after {
+    content: '';
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    display: block;
+    align-items: center;
+    border-radius: 50%;
+}
 /* --------------HERO END---------- */
 
 
@@ -235,6 +256,8 @@ display: block;
     display: flex;
     flex-wrap: wrap;
     gap: 24px 32px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .taste-item {
@@ -322,9 +345,24 @@ padding-bottom: 28px;
 .made-item {
     margin-bottom: 24px;
 }
+
+.made-item::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4c4c4c;
+    border: 1px solid #eceded;
+    margin-right: 8px;
+}
+
 .made-item:last-child {
     margin-bottom: 0;
 }
+
+
+
+
 .made-item-text {}
 
 /* =====================made end============= */
