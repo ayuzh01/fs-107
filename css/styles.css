@@ -133,6 +133,13 @@ background-size: cover;
     border-radius: 100px;
     padding: 14px 40px;
     margin-right: 14px;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.hero-btn-main:hover {
+    background-color: #fcf1e0;
+    color: #fd9222;
 }
 
 .hero-btn-link {
@@ -413,7 +420,10 @@ padding-bottom: 28px;
 
 /* products end */
 
-.sellers {}
+.sellers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .sellers-title {
     font-weight: 600;
@@ -423,17 +433,55 @@ padding-bottom: 28px;
     text-transform: uppercase;
     text-align: center;
     color: #111111;
+    margin-bottom: 50px;
 }
 
 .sellers-title .accent {
     color: #fd9222;
 }
 
-.sellers-list {}
+.sellers-list {
+    display: flex;
+    gap: 16px;
+}
 
-.sellers-item {}
+.sellers-item {
+    width: calc ((100% - 32px) / 3);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+border-left: 1px solid rgba(17, 17, 17, 0.1);
+border-right: 1px solid rgba(17, 17, 17, 0.1);
+border-radius: 0 0 15px 15px;
+}
+
+.sellers-item:hover .sellers-cover-text {
+    transform: translateY(0);
+
+}
+
+.sellers-cover-wrap {
+    position: relative;
+    overflow: hidden;
+}
 
 .sellers-image {}
+
+.sellers-cover-text {
+    position: absolute;
+    top: 0;
+    background-color: #4c4c4c;
+    font-size: 14px;
+line-height: 1.29;
+letter-spacing: -0.02em;
+color: #fafafa;
+height: 100%;
+padding-left: 32px;
+padding-right: 32px;
+display: flex;
+align-items: center;
+border-radius: 15px 15px 0 0;
+transform: translateY(100%);
+transition: transform 300ms linear;
+}
 
 .sellers-subtitle {
     font-weight: 600;
@@ -442,6 +490,10 @@ padding-bottom: 28px;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #111;
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+
 }
 
 /* =================sellers end======= */
